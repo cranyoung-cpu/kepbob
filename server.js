@@ -1,7 +1,6 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const url = require('url');
 
 const port = 3000;
 
@@ -11,9 +10,9 @@ function send(res, status, data, type = 'text/plain') {
 }
 
 function serveStatic(req, res) {
-  let pathname = url.parse(req.url).pathname;
-  if (pathname === '/') pathname = '/index.html';
-  const filePath = path.join(__dirname, 'public', pathname);
+  const pathname = new URL(req.url, 'http://localhost').pathname;
+  const resolved = pathname === '/' ? '/index.html' : pathname;
+  const filePath = path.join(__dirname, 'public', resolved);
   fs.readFile(filePath, (err, data) => {
     if (err) {
       send(res, 404, 'Not Found');
