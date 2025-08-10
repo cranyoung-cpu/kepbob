@@ -1,0 +1,11 @@
+{
+  "name": "kepco-wiki",
+  "version": "1.0.0",
+  "description": "Internal wiki for KEPCO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node server.js --test"
+  },
+  "license": "MIT"
+}
