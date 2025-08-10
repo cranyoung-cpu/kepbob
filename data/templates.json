@@ -1,0 +1,12 @@
+[
+  {
+    "id": "basic",
+    "name": "기본 텍스트",
+    "html": "<div class=\"template-block\"><div class=\"sections\"></div><button class=\"add-root\">항목추가</button></div>"
+  },
+  {
+    "id": "image",
+    "name": "이미지",
+    "html": "<div class=\"template-block image-block\"><input type=\"file\" class=\"img-input\"><img class=\"img-preview\" alt=\"\" /><div class=\"sections\"></div><button class=\"add-root\">항목추가</button></div>"
+  }
+]

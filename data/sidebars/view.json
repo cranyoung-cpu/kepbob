@@ -1,0 +1,4 @@
+{
+  "left": ["<button id=\"likeBtn\">좋아요</button>", "<button id=\"shareBtn\">공유하기</button>"],
+  "right": ["<div id=\"toc\">목차</div>"]
+}
